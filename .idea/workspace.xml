@@ -35,7 +35,7 @@
     &quot;onboarding.tips.debug.path&quot;: &quot;F:/Emppayroll/EmployeePayroll/src/Main.java&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.EmployeeWageCalculation">
     <configuration name="EmployeeWage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.brodglabz.Employee.EmployeeWage" />
       <module name="EmployeePayroll" />
@@ -49,8 +49,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EmployeeWageCalculation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.brodglabz.Employee.EmployeeWageCalculation" />
+      <module name="EmployeePayroll" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.brodglabz.Employee.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EmployeeWageCalculation" />
         <item itemvalue="Application.EmployeeWage" />
       </list>
     </recent_temporary>

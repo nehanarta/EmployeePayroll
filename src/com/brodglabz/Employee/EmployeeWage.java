@@ -1,18 +1,36 @@
 package com.brodglabz.Employee;
-
+import java.util.ArrayList;
 public class EmployeeWage {
-    static int finalWage = 0;
-    static int finalWorkHrs = 0;
+    String empCompanyName;
+    static int totalWorkingDaysInMonth;
+    static int maxWorkHrsInMonth;
+    static int perHourWage;
+    static int finalWage;
+    static int finalWorkHrs;
 
-    //static fixed values
+    public EmployeeWage(String empCompanyName, int totalWorkingDaysInMonth, int maxWorkHrsInMonth,
+                          int perHourWage, int finalWorkHrs, int finalWage) {
+        this.empCompanyName = empCompanyName;
+        this.totalWorkingDaysInMonth = totalWorkingDaysInMonth;
+        this.maxWorkHrsInMonth = maxWorkHrsInMonth;
+        this.perHourWage = perHourWage;
+        this.finalWorkHrs = finalWorkHrs;
+        this.finalWage = finalWage;
+    }
+}
+
+ class EmployeeWageCalculation {
     static final int FULL_DAY_WORK_HRS = 8;
     static final int PART_TIME_WORK_HRS = 4;
+    static int finalWage = 0;
+    static int finalWorkHrs = 0;
     String companyName;
     static int totalWorkingDaysInMonth;
     static int maxWorkHrsInMonth;
     static int perHourWage;
+    ArrayList<EmployeeWage> arraylist = new ArrayList<EmployeeWage>();
 
-    public EmployeeWage(String companyName, int totalWorkingDaysInMonth, int maxWorkHrsInMonth,
+    public EmployeeWageCalculation(String companyName, int totalWorkingDaysInMonth, int maxWorkHrsInMonth,
                                    int perHourWage){
         this.companyName = companyName;
         this.totalWorkingDaysInMonth = totalWorkingDaysInMonth;
@@ -73,6 +91,7 @@ public class EmployeeWage {
                 System.out.println("Final work hrs --> " +finalWorkHrs);
             }
         }
+        arraylist.add(new EmployeeWage(companyName,totalWorkingDaysInMonth,maxWorkHrsInMonth,perHourWage,finalWorkHrs,finalWage));
     }
 
     @Override
@@ -83,7 +102,7 @@ public class EmployeeWage {
     public static void main(String[] args) {
         System.out.println(" * * * Employee Wage Calculation * * * ");
 
-        EmployeeWage wipro = new EmployeeWage("MindTree",28,140,22);
+        EmployeeWageCalculation wipro = new EmployeeWageCalculation("Wipro",28,140,22);
         wipro.calculateWage();
         System.out.println();
         System.out.println(wipro);
@@ -91,7 +110,7 @@ public class EmployeeWage {
 
         resetValues();
 
-        EmployeeWage tcs = new EmployeeWage("TCS", 25, 120, 25);
+        EmployeeWageCalculation tcs = new EmployeeWageCalculation("TCS", 25, 120, 25);
         tcs.calculateWage();
         System.out.println();
         System.out.println(tcs);
